@@ -55,7 +55,7 @@ class Color_Page extends StatelessWidget {
       body: ListView.builder(
         itemCount: colors.length,
         itemBuilder: (context, index) {
-          return item(number: colors[index], color: Color(0xff79359F));
+          return item(item_models: colors[index], color: Color(0xff79359F));
         },
       ),
     );

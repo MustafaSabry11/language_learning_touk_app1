@@ -8,8 +8,9 @@ import 'package:language_learning_touk_app1/models/Class_Number.dart';
 // import 'package:toku/models/Number.dart';
 
 class item extends StatelessWidget {
-  const item({Key? key, required this.number, this.color}) : super(key: key);
-  final Items_model number;
+  const item({Key? key, required this.item_models, this.color})
+    : super(key: key);
+  final Items_model item_models;
   final Color? color;
   @override
   Widget build(BuildContext context) {
@@ -20,9 +21,9 @@ class item extends StatelessWidget {
         children: [
           Container(
             color: Color(0xffFFE4C4),
-            child: Image.asset(number.image!),
+            child: Image.asset(item_models.image!),
           ),
-          Expanded(child: itemInfo(items: number)),
+          Expanded(child: itemInfo(items: item_models)),
         ],
       ),
     );
